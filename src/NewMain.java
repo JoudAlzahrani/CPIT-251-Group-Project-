@@ -7,10 +7,8 @@
 // lina 
 // NNNNNNNNNNNNEEEEEEEWWWWWWWWWWW
 // يارب يزبط
-/**
- *
- * @author ACER
- */
+//الحمدلله 
+
 public class NewMain {
 
     /**
