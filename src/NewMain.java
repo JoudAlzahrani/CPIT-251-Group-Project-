@@ -8,7 +8,6 @@
 // NNNNNNNNNNNNEEEEEEEWWWWWWWWWWW
 // يارب يزبط
 //الحمدلله 
-// استغفرالله
 
 public class NewMain {
 
