@@ -1,0 +1,12 @@
+001,staff,Ali Ahmed,ali.ahmed@company.com
+002,staff,Fatima Saleh,fatima.saleh@company.com
+003,staff,Mohammed Khalid,mohammed.khalid@company.com
+004,staff,Noura Abdullah,noura.abdullah@company.com
+005,staff,Youssef Nasser,youssef.nasser@company.com
+006,staff,Laila Mohammed,laila.mohammed@company.com
+007,staff,Omar Saeed,omar.saeed@company.com
+008,staff,Salma Hussein,salma.hussein@company.com
+009,staff,Hassan Ali,hassan.ali@company.com
+010,staff,Sara Mansour,sara.mansour@company.com
+011,it,Khaled Omar,khaled.omar@company.com
+012,it,Amal Ibrahim,amal.ibrahim@company.com
