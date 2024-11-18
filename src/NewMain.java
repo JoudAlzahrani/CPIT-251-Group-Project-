@@ -28,6 +28,29 @@ public class NewMain {
             System.out.print("Enter your ID: ");
             String id = scanner.nextLine().trim();
 
+        } catch (Exception e) {
+            System.out.println("An error occurred: " + e.getMessage());
         }
+        
+         String employeeInfo = findEmployeeById(id);
+            if (employeeInfo == null) {
+                System.out.println("Invalid ID. Please try again.");
+                return;
+            }
+ 
+            String[] details = employeeInfo.split(",");
+            String role = details[1];
+            String name = details[2];
 
+            if ("staff".equalsIgnoreCase(role)) {
+                handleStaff(scanner, id, name);
+            } else if ("it".equalsIgnoreCase(role)) {
+                handleIT(scanner);
+            } else {
+                System.out.println("Unknown role. Access denied.");
+            }
+            
+        } 
+            
     }
+   
