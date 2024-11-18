@@ -38,17 +38,7 @@ public class NewMain {
                 return;
             }
  
-            String[] details = employeeInfo.split(",");
-            String role = details[1];
-            String name = details[2];
-
-            if ("staff".equalsIgnoreCase(role)) {
-                handleStaff(scanner, id, name);
-            } else if ("it".equalsIgnoreCase(role)) {
-                handleIT(scanner);
-            } else {
-                System.out.println("Unknown role. Access denied.");
-            }
+           
             
         } 
             
