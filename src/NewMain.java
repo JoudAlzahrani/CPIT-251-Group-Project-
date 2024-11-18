@@ -32,14 +32,14 @@ public class NewMain {
             System.out.println("An error occurred: " + e.getMessage());
         }
         
-         String employeeInfo = findEmployeeById(id);
-            if (employeeInfo == null) {
+        String employeeInfo = findEmployeeById(id);
+           if (employeeInfo == null) {
                 System.out.println("Invalid ID. Please try again.");
                 return;
             }
  
-           
-            
+       
+         
         } 
             
     }
