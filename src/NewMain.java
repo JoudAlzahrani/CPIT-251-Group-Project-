@@ -23,7 +23,7 @@ public class NewMain {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
+        
         try {
             System.out.print("Enter your ID: ");
             String id = scanner.nextLine().trim();
