@@ -11,19 +11,23 @@
 // استغفرالله
 // لا اله الا الله
 
+import java.util.*;
 
 public class NewMain {
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        // TODO code application logic here
-        // Create a Feedback object
-        FeedBack feedback = new FeedBack("emp001", "System is slow");
+    private static final String EMPLOYEE_FILE = "employees.txt.txt";
+    private static final String COMMENT_FILE = "comments.txt";
 
-        // Print feedback details
-        System.out.println(feedback.toString());
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        try {
+            System.out.print("Enter your ID: ");
+            String id = scanner.nextLine().trim();
+
+        }
+
     }
-    
-}
