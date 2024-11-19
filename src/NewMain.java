@@ -11,13 +11,15 @@
 // استغفرالله
 // لا اله الا الله
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.*;
+
 
 public class NewMain {
 
-    /**
-     * @param args the command line arguments
-     */
+   
     private static final String EMPLOYEE_FILE = "employees.txt.txt";
     private static final String COMMENT_FILE = "comments.txt";
 
@@ -49,10 +51,22 @@ public class NewMain {
                 handleIT(scanner);
             } 
          else {
-                System.out.println("Unknown role. Access denied.");
-            }
-         
-        } 
-            
+                System.out.println("Unknown role. Access denied.");}
     }
+    
+   
+private static String findEmployeeById(String id) throws IOException {
+    List<String> lines = Files.readAllLines(Paths.get(EMPLOYEE_FILE));
+    for (String line : lines) {
+        if (line.startsWith(id + ",")) {
+            return line;
+        }
+    }
+    return null;
+}
+
+    private static void handleIT(Scanner scanner) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+}
    
