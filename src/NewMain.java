@@ -1,16 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-// testing of pull 
-// lina 
-// يارب يزبط
-//الحمدلله 
-//joud_test_ يارببب
-// استغفرالله
-// لا اله الا الله
-// تجربة لينا 
 
 import java.io.IOException;
 import java.nio.file.Files;
