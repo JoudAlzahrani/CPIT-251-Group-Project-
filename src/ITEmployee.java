@@ -19,7 +19,6 @@ public class ITEmployee {
         System.out.println("FB_ID   | Type               | Description          | Previous Response");
         System.out.println("--------|--------------------|----------------------|------------------------");
 
-       
         boolean found = false;
         for (int i = 0; i < feedbackList.size(); i++) {
             FeedBack feedback = feedbackList.get(i);
@@ -51,7 +50,7 @@ public class ITEmployee {
         }
 
         if (choice == 0) {
-            return; 
+            return;
         }
 
         if (choice > 0 && choice <= feedbackList.size()) {
@@ -64,7 +63,31 @@ public class ITEmployee {
             System.out.print("Enter your response: ");
             String response = scanner.nextLine();
             selectedFeedback.setItResponse(response);
-            selectedFeedback.setRespondedBy(name); 
+            selectedFeedback.setRespondedBy(name);
+
+            System.out.print("Mark this issue as (1: Solved, 2:Unsolved): ");
+            int statusChoice;
+            try {
+                statusChoice = Integer.parseInt(scanner.nextLine());
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid input. Returning to menu.");
+                return;
+            }
+            if (statusChoice == 1) {
+                selectedFeedback.setStatus("Solved");
+            } else if (statusChoice == 2) {
+                selectedFeedback.setStatus("Unsolved");
+            } else {
+                System.out.println("Invalid status choice. Returning t menu.");
+                return;
+            }
+            //responses.txt
+            fileHandler.saveResponse(selectedFeedback, id, name);
+            // feedbacks.txt
+            fileHandler.saveFeedbacks(feedbackList);
+            System.out.println("=================================");
+            System.out.println("Response has been submitted successfully.");
+            System.out.println("=================================");
         }
     }
 }
