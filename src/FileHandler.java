@@ -119,4 +119,84 @@ public class FileHandler {
             }
         }
     }
+    public void saveFeedBacks(ArrayList<FeedBack> feedbackList) {
+    BufferedWriter writer = null;
+    try {
+        writer = new BufferedWriter(new FileWriter("feedbacks.txt"));
+        for (FeedBack feedback : feedbackList) {
+            writer.write(feedback.getId() + "," + feedback.getType() + "," + feedback.getDescription() + "," +
+                    feedback.getCreatedBy() + "," + feedback.getCreatedByName() + "," + feedback.getStatus() + "," +
+                    (feedback.getItResponse() != null ? feedback.getItResponse() : "") + "," +
+                    (feedback.getRespondedBy() != null ? feedback.getRespondedBy() : ""));
+            writer.newLine();
+        }
+    } catch (IOException e) {
+        System.out.println("Error saving feedbacks: " + e.getMessage());
+    } finally {
+        if (writer != null) {
+            try {
+                writer.close();
+            } catch (IOException e) {
+                System.out.println("Error closing the file: " + e.getMessage());
+            }
+        }
+    }
+}
+
+
+    public void saveResponse(FeedBack feedback, String itId, String itName) {
+        BufferedWriter writer = null;
+        try {
+            writer = new BufferedWriter(new FileWriter("responses.txt", true));
+            writer.write("Feedback ID: " + feedback.getId() + ", Type: " + feedback.getType() + ", Response: " + feedback.getItResponse() +
+                    ", IT: " + itName + " (ID: " + itId + ")");
+            writer.newLine();
+        } catch (IOException e) {
+            System.out.println("Error saving response: " + e.getMessage());
+        } finally {
+            if (writer != null) {
+                try {
+                    writer.close();
+                } catch (IOException e) {
+                    System.out.println("Error closing the file: " + e.getMessage());
+                }
+            }
+        }
+    }
+    public void readResponsesWithStatus(ArrayList<FeedBack> feedbackList) {
+    BufferedReader reader = null;
+    try {
+        reader = new BufferedReader(new FileReader("responses.txt"));
+        String line;
+        while ((line = reader.readLine()) != null) {
+            System.out.println(line); 
+            String feedbackId = line.split(",")[0].split(":")[1].trim();
+            FeedBack matchingFeedback = null;
+            for (FeedBack feedBack : feedbackList) {
+                if (feedBack.getId().equals(feedbackId)) {
+                    matchingFeedback = feedBack;
+                    break;
+                }
+            }
+
+
+            if (matchingFeedback != null) {
+                System.out.println("Status: " + matchingFeedback.getStatus());
+            } else {
+                System.out.println("Status: Unknown");
+            }
+        }
+    } catch (IOException e) {
+        System.out.println("No previous responses found.");
+    } finally {
+        if (reader != null) {
+            try {
+                reader.close();
+            } catch (IOException e) {
+                System.out.println("Error closing the file: " + e.getMessage());
+            }
+        }
+    }
+}
+
 }
