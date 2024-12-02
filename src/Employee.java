@@ -62,4 +62,33 @@ public class Employee {
         System.out.println("Feedback ID: " + feedbackId);
         System.out.println("=================================");
     }
+    
+    
+    public void viewFeedback(ArrayList<FeedBack> feedbackList) {
+        System.out.println("=================================");
+        System.out.println("My Submitted Feedback");
+        System.out.println("=================================");
+        System.out.println("ID      | Type               | Description          | Status    | IT Response");
+        System.out.println("--------|--------------------|----------------------|-----------|----------------------");
+
+        boolean found = false;
+
+        for (FeedBack feedback : feedbackList) {
+            if (feedback.getCreatedBy().equals(id)) {
+                System.out.printf("%-8s| %-18s| %-22s| %-10s| %-22s%n",
+                        feedback.getId(),
+                        feedback.getType(),
+                        feedback.getDescription(),
+                        feedback.getStatus(),
+                        (feedback.getItResponse() != null ? feedback.getItResponse() : "No response yet"));
+                found = true;
+            }
+        }
+
+        if (!found) {
+            System.out.println("No feedback found.");
+        }
+        System.out.println("=================================");
+    }
 }
+
