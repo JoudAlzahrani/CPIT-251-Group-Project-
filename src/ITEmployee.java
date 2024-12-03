@@ -90,4 +90,31 @@ public class ITEmployee {
             System.out.println("=================================");
         }
     }
+        public void viewSolvedAndRespondedIssues(ArrayList<FeedBack> feedbackList) {
+        System.out.println("=================================");
+        System.out.println("Solved and Responded Issues");
+        System.out.println("=================================");
+        System.out.println("FB_ID   | Type               | Description          | Status    | Responded By");
+        System.out.println("--------|--------------------|----------------------|-----------|----------------------");
+
+        boolean found = false;
+
+        for (FeedBack feedback : feedbackList) {
+            if ("Solved".equalsIgnoreCase(feedback.getStatus())) {
+                System.out.printf("%-8s| %-18s| %-22s| %-10s| %-22s%n",
+                        feedback.getId(),
+                        feedback.getType(),
+                        feedback.getDescription(),
+                        feedback.getStatus(),
+                        feedback.getRespondedBy());
+                found = true;
+            }
+        }
+
+        if (!found) {
+            System.out.println("No solved issues found.");
+        }
+        System.out.println("=================================");
+    }
 }
+
