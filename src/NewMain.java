@@ -12,11 +12,11 @@ public class NewMain {
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
-            System.out.println("==========================================");
-            System.out.println("Welcome to the Feedback Management Platform!");
-            System.out.println("==========================================");
+            System.out.println("==============================================");
+            System.out.println("Welcome to the Feedback Management application!");
+            System.out.println("==============================================");
             System.out.println("Please select your Employee Type:");
-            System.out.println("1. General Epmloyee");
+            System.out.println("1. General Employee");
             System.out.println("2. Technical Support Employee");
             System.out.println("3. Exit");
             System.out.println("=================================");
@@ -44,9 +44,9 @@ public class NewMain {
             }
 
             System.out.println("=================================");
-            if (roleChoice.equals("1") && user[1].equalsIgnoreCase("GeneralEpmloyee")) {
+            if (roleChoice.equals("1") && user[1].equalsIgnoreCase("GeneralEmloyee")) {
                 System.out.println("Welcome, " + user[2] + "!");
-                System.out.println("You are now logged in as a General Epmloyee.");
+                System.out.println("You are now logged in as a General Emloyee.");
                 Employee employee = new Employee(user[0], user[2]);
                 handleEmployeeActions(employee, scanner, feedbackList, fileHandler);
             } else if (roleChoice.equals("2") && user[1].equalsIgnoreCase("TechnicalSupportEmployee")) {
@@ -61,7 +61,7 @@ public class NewMain {
         }
     }
 
-    private static void handleEmployeeActions(Employee employee, Scanner scanner, ArrayList<Feedback> feedbackList, FileHandler fileHandler) {
+    private static void handleEmployeeActions(Employee employee, Scanner scanner, ArrayList<FeedBack> feedbackList, FileHandler fileHandler) {
         while (true) {
             System.out.println("==============================");
             System.out.println("      Employee Dashboard");
