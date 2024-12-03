@@ -44,12 +44,12 @@ public class NewMain {
             }
 
             System.out.println("=================================");
-            if (roleChoice.equals("1") && user[1].equalsIgnoreCase("GeneralEmloyee")) {
+            if (roleChoice.equals("1") && user[1].equalsIgnoreCase("staff")) {
                 System.out.println("Welcome, " + user[2] + "!");
                 System.out.println("You are now logged in as a General Emloyee.");
                 Employee employee = new Employee(user[0], user[2]);
                 handleEmployeeActions(employee, scanner, feedbackList, fileHandler);
-            } else if (roleChoice.equals("2") && user[1].equalsIgnoreCase("TechnicalSupportEmployee")) {
+            } else if (roleChoice.equals("2") && user[1].equalsIgnoreCase("it")) {
                 System.out.println("Welcome, " + user[2] + "!");
                 System.out.println("You are now logged in as a Technical Support Employee.");
                 ITEmployee itEmployee = new ITEmployee(user[0], user[2]);
