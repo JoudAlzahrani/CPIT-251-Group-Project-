@@ -13,7 +13,7 @@ public class EmployeeTest {
 
     @Before
     public void setup() {
-        employee = new Employee("E001", "John Doe");
+        employee = new Employee("001", "Ahmed Mohammed");
         feedbackList = new ArrayList<FeedBack>();
 
         fileHandler = new FileHandler();
@@ -25,6 +25,29 @@ public class EmployeeTest {
         employee.submitFeedback(feedbackList, scanner, fileHandler);
         FeedBack feedback = feedbackList.get(0);
         assertEquals("Printer issue", feedback.getType());
+    }
+
+    @Test
+    public void SubmitFeedback_TestIssueDescription() {
+        Scanner scanner = new Scanner("3\nComputer crashes frequently\n");
+        employee.submitFeedback(feedbackList, scanner, fileHandler);
+        FeedBack feedback = feedbackList.get(0);
+
+        assertEquals("Computer crashes frequently", feedback.getDescription());
+    }
+
+    @Test
+    public void ViewFeedback_TestCreatedBy() {
+        feedbackList.add(new FeedBack("FB001", "Printer issue", "Printer not working", "001", "Ahmed Mohammed"));
+
+        boolean found = false;
+        for (FeedBack feedback : feedbackList) {
+            if (feedback.getCreatedBy().equals("001")) {
+                found = true;
+                break;
+            }
+        }
+        assertTrue(found);
     }
 
 }
