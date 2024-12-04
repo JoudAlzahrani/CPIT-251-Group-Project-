@@ -84,7 +84,7 @@ public class ITEmployee {
             //responses.txt
             fileHandler.saveResponse(selectedFeedback, id, name);
             // feedbacks.txt
-            fileHandler.saveFeedbacks(feedbackList);
+            fileHandler.saveFeedBacks(feedbackList);
             System.out.println("=================================");
             System.out.println("Response has been submitted successfully.");
             System.out.println("=================================");
