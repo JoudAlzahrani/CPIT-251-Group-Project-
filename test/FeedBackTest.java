@@ -10,5 +10,9 @@ public class FeedBackTest {
         FeedBack feedback = new FeedBack("FB1", "Printer issue", "Printer is not working", "001", "Ali Ahmed");
         assertEquals("FB1", feedback.getId());
     }
-    
+     @Test
+    public void FeedbackCreationTest_VerifyByType() {
+        FeedBack feedback = new FeedBack("FB1", "Printer issue", "Printer is not working", "001", "Ali Ahmed");
+        assertEquals("Printer issue", feedback.getType());
+    }
 }
