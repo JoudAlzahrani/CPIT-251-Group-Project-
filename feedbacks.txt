@@ -1,0 +1,11 @@
+FB1,Printer issue,Printer is not turning on,001,Ali Ahmed,Solved,Fixed by checking the power supply,Khaled Omar
+FB2,Internet issue,Wi-Fi keeps disconnecting,002,Fatima Saleh,Solved,Rebooted the router and updated drivers,Amal Ibrahim
+FB3,Computer issue,Computer freezes when opening apps,003,Mohammed Khalid,Unsolved,,
+FB4,"Sahl" system Issue,Unable to log in to Sahl system,004,Noura Abdullah,Solved,Reset the login credentials,Khaled Omar
+FB5,Printer issue,Paper jams frequently,005,Youssef Nasser,Unsolved,We are working to resolve this issue,Khaled Omar
+FB6,Internet issue,Slow internet speed,006,Laila Mohammed,Solved,Resolved by adjusting the router settings,Amal Ibrahim
+FB7,Other,Can't access shared folders,007,Omar Saeed,Unsolved,,
+FB8,Printer issue,Printer prints blank pages,008,Salma Hussein,Solved,Fixed by replacing the toner cartridge,Khaled Omar
+FB9,Computer issue,Application not opening,009,Hassan Ali,Solved,Reinstalled the application and rebooted,Amal Ibrahim
+FB10,Internet issue,Network timeout error,010,Sara Mansour,Unsolved,,
+FB11,Computer issue,my computer is not working,005,Youssef Nasser,Solved,Power button repaired,Amal Ibrahim
