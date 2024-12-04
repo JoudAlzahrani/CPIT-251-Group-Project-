@@ -75,7 +75,7 @@ public class NewMain {
 
             if (choice.equals("1")) {
                 employee.submitFeedback(feedbackList, scanner, fileHandler);
-                fileHandler.saveFeedbacks(feedbackList);
+                fileHandler.saveFeedBacks(feedbackList);
             } else if (choice.equals("2")) {
                 employee.viewFeedback(feedbackList);
             } else if (choice.equals("3")) {
