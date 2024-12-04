@@ -1,4 +1,3 @@
-
 import java.io.*;
 import java.util.ArrayList;
 
@@ -73,7 +72,6 @@ public class FileHandler {
                 feedback.setStatus(parts[5]);
                 feedback.setItResponse(parts.length > 6 ? parts[6] : null);
                 feedback.setRespondedBy(parts.length > 7 ? parts[7] : null);
-// respondedBy RUBA
                 feedbackList.add(feedback);
             }
         } catch (IOException e) {
@@ -91,34 +89,6 @@ public class FileHandler {
         return feedbackList;
     }
 
-    public void saveFeedbacks(ArrayList<FeedBack> feedbackList) {
-        BufferedWriter writer = null;
-        try {
-            writer = new BufferedWriter(new FileWriter("feedbacks.txt"));
-            for (FeedBack feedback : feedbackList) {
-                writer.write(feedback.getId() + "," + feedback.getType()
-                        + "," + feedback.getDescription() + ","
-                        + feedback.getCreatedBy() + ","
-                        + feedback.getCreatedByName() + "," + feedback.getStatus() + ","
-                        + (feedback.getItResponse() != null
-                        ? feedback.getItResponse() : "") + ","
-                        + (feedback.getRespondedBy() != null
-                        ? feedback.getRespondedBy() : ""));
-                writer.newLine();
-            }
-        } catch (IOException e) {
-            System.out.println("Error saving feedbacks: " + e.getMessage());
-        } finally {
-            if (writer != null) {
-                try {
-                    writer.close();
-                } catch (IOException e) {
-                    System.out.println("Error closing the file: "
-                            + e.getMessage());
-                }
-            }
-        }
-    }
     public void saveFeedBacks(ArrayList<FeedBack> feedbackList) {
     BufferedWriter writer = null;
     try {
@@ -143,7 +113,6 @@ public class FileHandler {
     }
 }
 
-
     public void saveResponse(FeedBack feedback, String itId, String itName) {
         BufferedWriter writer = null;
         try {
@@ -163,6 +132,7 @@ public class FileHandler {
             }
         }
     }
+    
     public void readResponsesWithStatus(ArrayList<FeedBack> feedbackList) {
     BufferedReader reader = null;
     try {
@@ -178,7 +148,6 @@ public class FileHandler {
                     break;
                 }
             }
-
 
             if (matchingFeedback != null) {
                 System.out.println("Status: " + matchingFeedback.getStatus());
@@ -198,5 +167,4 @@ public class FileHandler {
         }
     }
 }
-
 }
