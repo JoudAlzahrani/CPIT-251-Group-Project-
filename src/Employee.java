@@ -12,6 +12,22 @@ public class Employee {
         this.name = name;
     }
 
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.id = name;
+    }
+
     public void submitFeedback(ArrayList<FeedBack> feedbackList, Scanner scanner, FileHandler fileHandler) {
         String type = "";
         String description;
@@ -62,8 +78,7 @@ public class Employee {
         System.out.println("Feedback ID: " + feedbackId);
         System.out.println("=================================");
     }
-    
-    
+
     public void viewFeedback(ArrayList<FeedBack> feedbackList) {
         System.out.println("=================================");
         System.out.println("My Submitted Feedback");
@@ -91,4 +106,3 @@ public class Employee {
         System.out.println("=================================");
     }
 }
-
