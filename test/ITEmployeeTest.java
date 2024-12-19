@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import static org.junit.Assert.*;
 
 public class ITEmployeeTest {
-
     private ITEmployee itEmployee;
     private ArrayList<FeedBack> feedbackList;
     private FileHandler fileHandler;
@@ -22,7 +21,7 @@ public class ITEmployeeTest {
         FeedBack feedback = new FeedBack("FB1", "Printer issue", "Test", "001", "Ali Ahmed");
         feedbackList.add(feedback);
 
-        // Call: Directly update the feedback's status as part of the test logic
+        // Call: update the feedback's status
         feedback.setStatus("Solved");
         feedback.setItResponse("Replaced toner");
 
@@ -36,7 +35,7 @@ public class ITEmployeeTest {
         FeedBack feedback = new FeedBack("FB1", "Printer issue", "Test", "001", "Ali Ahmed");
         feedbackList.add(feedback);
 
-        // Call: Directly update the feedback's status as part of the test logic
+        // Call: update the feedback's status
         feedback.setStatus("Unsolved");
         feedback.setItResponse("Replaced toner");
 
@@ -50,7 +49,7 @@ public class ITEmployeeTest {
         FeedBack feedback = new FeedBack("FB1", "Printer issue", "Test", "001", "Ali Ahmed");
         feedbackList.add(feedback);
 
-        // Call: Directly set the IT response
+        // Call: set the IT response
         feedback.setItResponse("Replaced toner");
 
         // Assert: Verify that the IT response is updated correctly
