@@ -3,8 +3,21 @@ import java.util.ArrayList;
 
 public class FileHandler {
 
+    private static FileHandler instance;
     private String[][] employees = new String[20][4];
     private int employeeCount = 0;
+
+    
+    
+    private FileHandler() {}
+
+    public static FileHandler getInstance() {
+        if (instance == null) {
+            instance = new FileHandler();
+        }
+        return instance;
+    }
+
 
     public String generateFeedbackId(ArrayList<FeedBack> feedbackList) {
         int maxId = 0;
