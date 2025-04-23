@@ -2,11 +2,10 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-
-
 public class NewMain {
+
     public static void main(String[] args) {
-        FileHandler fileHandler = new FileHandler();
+        FileHandler fileHandler = FileHandler.getInstance();
         fileHandler.loadEmployees("employees.txt");
         ArrayList<FeedBack> feedbackList = fileHandler.loadFeedbacks();
         Scanner scanner = new Scanner(System.in);
@@ -115,4 +114,3 @@ public class NewMain {
     }
 
 }
-   
